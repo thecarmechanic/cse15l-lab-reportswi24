@@ -1,14 +1,14 @@
-#Week 1: Lab Report #1
+#Week 1: Lab Report #1  
 Date: 10.02.23  
   
-##Summary of Learning
+##Summary of Learning  
 Thus far, we have been introduced to Github and four basic command line arguments  
 - `cd` which changes the current working directory to a given path
 - `pwd` which prints the current working directory
 - `ls` which prints a list of of the files and folders in a given path
 - `cat` which prints the contents of one or more files in the given path(s)
 
-##Remote Access & FileSystem
+##Remote Access & FileSystem  
 This portion contains examples of the commands `cd`, `ls`, and `cat` in use to illustrate their function.  
 1. **Without any arguments**
    When we type `cd` without any arguments, the current working directory is automatically changed to the root folder, which is */home* in this case. This is because when no path is specified, `cd` switches to the default directory, which is the root folder.
@@ -23,3 +23,4 @@ This portion contains examples of the commands `cd`, `ls`, and `cat` in use to i
 3. **With a path to a file as an argument**
    When `cd` is used with a path to a file as an argument, an error is thrown that alerts us the path is not a directory. This is because `cd` is used to switch the current working directory we're in, which is not applicable to files.
    When `ls` is used with a path to a file as an argument, merely the file name will be returned. This is because files are the metaphorical end of the file structure - there is nothing nested inside them, so `ls` just returns the file name specified.
+   When `cat` is used with a path to a file as an argument, the contents of the file is printed to the terminal. If multiple file paths are listed, it prints the contents of all the files. Finally `cat` works, because it's meant to be used on files!

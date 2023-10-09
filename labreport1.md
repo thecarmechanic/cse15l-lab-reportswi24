@@ -28,5 +28,8 @@ This portion contains examples of the commands `cd`, `ls`, and `cat` in use to i
    
 4. **With a path to a file as an argument**\
    When `cd` is used with a path to a file as an argument, an error is thrown that alerts us the path is not a directory. This is because `cd` is used to switch the current working directory we're in, which is not applicable to files.\
+   ![Image](cd-w-file.png)\
    When `ls` is used with a path to a file as an argument, merely the file name will be returned. This is because files are the metaphorical end of the file structure - there is nothing nested inside them, so `ls` just returns the file name specified.\
-   When `cat` is used with a path to a file as an argument, the contents of the file is printed to the terminal. If multiple file paths are listed, it prints the contents of all the files. Finally `cat` works, because it's meant to be used on files!
+   ![Image](ls-w-file.png)\
+   When `cat` is used with a path to a file as an argument, the contents of the file is printed to the terminal. If multiple file paths are listed, it prints the contents of all the files. Finally `cat` works, because it's meant to be used on files!\
+   ![Image](cat-w-file.png)

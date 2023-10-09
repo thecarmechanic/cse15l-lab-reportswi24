@@ -20,10 +20,13 @@ This portion contains examples of the commands `cd`, `ls`, and `cat` in use to i
 
 2. **With a path to a directory as an argument**\
    When `cd` is used with a path to a directory as an argument, the current working directory is changed to the specified directory, *if the specified path can be found*. This means that the given directory path is either an absolute path, or a relative path to a file *within the current working directory*.\
+   ![Image](cd-w-directory.png)\
    Like `cd`, when the given directory path is either an absolute path, or a relative path to a file within the current working directory, `ls` will work. In this case, `ls` will list the directories/folders inside the path specified without changing the current working directory.\
+   ![Image](ls-w-directory.png)\
    `cat` will throw an error with a path to a directory as an argument, because this command prints the contents of files, and therefore expects files to be specified. The command does not work with merely a directory path as argument.\
+   ![Image](cat-w-directory.png)\
    
-3. **With a path to a file as an argument**\
+4. **With a path to a file as an argument**\
    When `cd` is used with a path to a file as an argument, an error is thrown that alerts us the path is not a directory. This is because `cd` is used to switch the current working directory we're in, which is not applicable to files.\
    When `ls` is used with a path to a file as an argument, merely the file name will be returned. This is because files are the metaphorical end of the file structure - there is nothing nested inside them, so `ls` just returns the file name specified.\
    When `cat` is used with a path to a file as an argument, the contents of the file is printed to the terminal. If multiple file paths are listed, it prints the contents of all the files. Finally `cat` works, because it's meant to be used on files!

@@ -1,4 +1,4 @@
-# Week 1: Lab Report #1  
+# Lab Report Blog #1  
 Date: 10.02.23  
   
 ## Summary of Learning  

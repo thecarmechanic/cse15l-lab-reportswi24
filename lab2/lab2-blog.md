@@ -62,7 +62,7 @@ class ChatServer{
 
 ![Image](screenshots/ssh-pubkey-path.png)
 
-- Absolute path to public SSH key on the remote server: ``
+- Absolute path to public SSH key on the remote server: `/home/linux/ieng6/oce/4b/cah010/.ssh/authorized_keys`
 
 #### Remote Server Login
 No password needed!

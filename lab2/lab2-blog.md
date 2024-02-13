@@ -56,17 +56,17 @@ class ChatServer{
    
 ### Part 2
 #### SSH Keys
-![Image](screenshots/ssh-privkey-path.png)\
+![Image](screenshots/ssh-privkey-path.png)
 
 - Absolute path to private SSH key: `/Users/carmenhe/.ssh/id_rsa`
 
-![Image](screenshots/)\
+![Image](screenshots/)
 
 - Absolute pathe to public SSH key: ``
 
 #### Remote Server Login
 No password needed!
-![Image](screenshots/ssh-login.png)\
+![Image](screenshots/ssh-login.png)
 
 ### Part 3
 First of all, I didn’t know that it was possible to connect to a remote server from a local machineuntil lab in Week 2. It was really cool to learn how to do this, and perform all kinds ofmanipulations across these servers: I particularly enjoyed learning how to transfer files across twodifferent servers. Addtionally, I learned a lot about how to read urls over these past two weeks. Now I know the meaning of many symbols and can identify the different parts of a url, whenpreviously they were indecipherable gibberish to me.

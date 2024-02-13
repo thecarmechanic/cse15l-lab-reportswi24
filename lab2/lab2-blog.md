@@ -52,7 +52,7 @@ class ChatServer{
 
 2. In the image below, I entered another url with the path `/add-message`, but with the new query `?s=Shut up T-T&user=Roommate`. Again, the complete url, of type `URI`, is passed as anargument into the `handleRequest` method of the `Handler` object. Again, the second conditional `url.getPath().equals("/add-message")` evaluates to true. Hence, the String field `messages` is updated again to include the string parameters from the new query andreturned to the webpage. Now, we see that messages is `messages = "Carmen: Good morning! :)\nRoommate: Shut up T-T"`.\
    
-   ![Image](screenshots/chat-message2.png)\
+   ![Image](screenshots/chat-message2.png)
    
 ### Part 2
 #### SSH Keys

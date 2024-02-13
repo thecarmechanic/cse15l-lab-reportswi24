@@ -50,7 +50,7 @@ class ChatServer{
    
    ![Image](screenshots/chat-message1.png)
 
-2. In the image below, I entered another url with the path `/add-message`, but with the new query `?s=Shut up T-T&user=Roommate`. Again, the complete url, of type `URI`, is passed as anargument into the `handleRequest` method of the `Handler` object. Again, the second conditional `url.getPath().equals("/add-message")` evaluates to true. Hence, the String field `messages` is updated again to include the string parameters from the new query andreturned to the webpage. Now, we see that messages is `messages = "Carmen: Good morning! :)\nRoommate: Shut up T-T"`.\
+2. In the image below, I entered another url with the path `/add-message`, but with the new query `?s=Shut up T-T&user=Roommate`. Again, the complete url, of type `URI`, is passed as anargument into the `handleRequest` method of the `Handler` object. Again, the second conditional `url.getPath().equals("/add-message")` evaluates to true. Hence, the String field `messages` is updated again to include the string parameters from the new query and returned to the webpage. Now, we see that messages is `messages = "Carmen: Good morning! :)\nRoommate: Shut up T-T"`. This output follow expected behavior.\
    
    ![Image](screenshots/chat-message2.png)
    
@@ -58,11 +58,11 @@ class ChatServer{
 #### SSH Keys
 ![Image](screenshots/ssh-privkey-path.png)
 
-- Absolute path to private SSH key: `/Users/carmenhe/.ssh/id_rsa`
+- Absolute path to private SSH key on my local computer: `/Users/carmenhe/.ssh/id_rsa`
 
-![Image](screenshots/)
+![Image](screenshots/ssh-pubkey-path.png)
 
-- Absolute pathe to public SSH key: ``
+- Absolute path to public SSH key on the remote server: ``
 
 #### Remote Server Login
 No password needed!

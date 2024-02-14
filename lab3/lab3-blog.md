@@ -64,7 +64,7 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    technical/plos/journal.pbio.0020190.txt:        sequence, which is a specific series of eight base pairs in the DNA of the bacterial
    technical/plos/journal.pbio.0020190.txt:        chromosomes, on the order of one or two thousand base pairs of DNA (or less—their length is
    ```
-   I can combine this with other commands, such as `wc`, to count the total number of matches, and specify the file type in the directory pattern. This example shows that 226 lines within the text files in technical/biomed contain a match.
+   I can combine this with other commands, such as `wc`, to count the total number of matches, and specify the file type in the directory pattern. This is something we can do with all `grep` commands. The example shows that 226 lines within the text files in technical/biomed contain a match. 
    ```
    $ grep -r "base pair" technical/biomed/*.txt | wc
    226    2326   22534
@@ -83,7 +83,7 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    technical/plos/journal.pbio.0020223.txt
    ```
 
-   When a specific file path is specified, if it contains a match, it is the only file printed.
+   When a specific file path is specified, if it contains a match, it is the only file printed. If it doesn't match, nothing is printed.
    ```
    $ grep -l "base pair" technical/plos/journal.pbio.0020190.txt
    technical/plos/journal.pbio.0020190.txt
@@ -93,7 +93,29 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
        - Prompt: How does grep -l work and how can it be used to explore files?
        - Output: Provided the user manual definition of `-l` in context of `grep`, and 4 conceptual applications of `grep -l` with syntax. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -l`.
    
-3. `-c`:
+3. `-c`: Prints the number of lines that contains the pattern in it to the terminal.  
+   Syntax: `grep -c "pattern" /file path/`  
+
+   Like for all other `grep` applications that take a file path, I can search through all the files in a directory with `*.txt`.
+   ```
+   $ grep -c "RNA" technical/biomed/*.txt
+   technical/biomed/1468-6708-3-1.txt:0
+   technical/biomed/1468-6708-3-10.txt:0
+   technical/biomed/1468-6708-3-3.txt:0
+   technical/biomed/1468-6708-3-4.txt:0
+   technical/biomed/1468-6708-3-7.txt:0
+   technical/biomed/1471-2091-2-10.txt:0
+   technical/biomed/1471-2091-2-11.txt:9
+   technical/biomed/1471-2091-2-12.txt:0
+   technical/biomed/1471-2091-2-13.txt:13
+   ...828 lines ommitted...
+   ```
+   Of course this command works on individual files as well. Note that the filed name does not need to be printed to the terminal in this case.
+   ```
+   $ grep -c "RNA" technical/biomed/1471-2091-2-11.txt
+   9
+   ```
+   Source: ![Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
    
-4. `-f file`:
+5. `-f file`:
 

@@ -115,7 +115,7 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    $ grep -c "RNA" technical/biomed/1471-2091-2-11.txt
    9
    ```
-   Source: ![Link](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+   Source: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
    
 5. `-f file`:
 

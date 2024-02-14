@@ -6,23 +6,23 @@
 Last week, I stepped through the process of indentifying and isolating progam bugs.  
 <br/>For the `ArrayExamples` class, I used `JUnit` tests to check for buggy methods. Let's look at one example.
 > 🔄 **Buggy Method:** `reverseInPlace(int[] arr)`
-> Failure-Inducing Input
+> **Failure-Inducing Input**
 > ```
 > int[] fails = {3,2,1};
 > assertArrayEquals(new int[]{1,2,3}, ArrayExamples.reverseInPlace(fails));
 > ```
 > 
-> Asymptomatic Input
+> **Asymptomatic Input**
 > ```
 > int[] passes = {3,3,3};
 > assertArrayEquals(new int[]{3,3,3}, input1);
 > ```
 > 
-> Symptom
-> ![Image](screenshots/bug-symptom.png)
+> **Symptom**
+> ![Image](screenshots/bug-symptom.png)  
 > From the output after running my tests, it appears that the _failure-inducing input_ is not reversing as expected.
 > 
-> The Bug
+> **The Bug**
 > - Before fix:
 >   ```
 >   // Changes the input array to be in reversed order
@@ -46,4 +46,6 @@ Last week, I stepped through the process of indentifying and isolating progam bu
 >   }
 >   ```
 >   To fix the bug, I created a new variable called `replaced` to store the value being replaced, so it’s not being overwritten. Then I only need to iterate through half of the list so the elements in the latter half of the list are updated with the value stored in the `replaced`.
->   
+
+### Part 2: Researching Commands
+

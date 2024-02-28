@@ -117,5 +117,12 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    ```
    Source: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
    
-5. `-f file`:
+5. `-f file`: Searches through files for the patterns specified in the file path passed as the `file` argument after -f.  
+   Syntax: `grep -f /pattern file path/ /file path to search/`
+
+   _Source: Chat_GPT_
+       - Prompt: How does grep -f file work and how can it be used to explore files?
+       - Output: Provided the user manual definition of `-f file` in context of `grep`, and indicated that it could be used. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -f file`.
+
+
 

@@ -58,7 +58,6 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
 <br/>**Options**
 1. `-r` Recursively searches through the specified directory the given String pattern.
    Syntax: `grep - r "pattern" /directory path/`  
-   
    For each file that has the pattern in the entire directory, lines that contain the matches are printed out. This is helpful because sometimes we want to identify occurences of a target pattern in an entire directroy of related files instead of merely one file. In the example below, I search for occurences of the string "base pair" in the directory `technical/plos` and find 3 matches.
    ```
    $ grep -r "base pair" technical/plos
@@ -72,10 +71,10 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    226    2326   22534
    ```
    _Source: Chat_GPT_
-       - Prompt: How does grep -r work and how can it be used to explore files?
-       - Output: Provided the user manual definition of `-r` in context of `grep`, and 6 conceptual applications of `grep -r` with syntax. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -r`.
+   - Prompt: How does grep -r work and how can it be used to explore files?
+   - Output: Provided the user manual definition of `-r` in context of `grep`, and 6 conceptual applications of `grep -r` with syntax. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -r`.
   
-2. `-l`: Limits the output to a list of the files in the specified file path that contain a match of the pattern.
+3. `-l`: Limits the output to a list of the files in the specified file path that contain a match of the pattern.
    Syntax: `grep - l "pattern" /file path/`
 
    When I use the expansion file path, all relevant files names containing the pattern are printed. This is very useful for when we want to see which specific files discuss a topic of interest. In the example below, I search for the pattern "base pair" among text files in the directory `technical/plos`. Because the command only takes a file path, the `*` expansion allows us to search through all the text files in the directory.
@@ -91,11 +90,11 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    technical/plos/journal.pbio.0020190.txt
    ```
 
-   _Source: Chat_GPT_ <br/>
-       - Prompt: How does grep -l work and how can it be used to explore files?
-       - Output: Provided the user manual definition of `-l` in context of `grep`, and 4 conceptual applications of `grep -l` with syntax. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -l`.
+   _Source: Chat_GPT_
+   - Prompt: How does grep -l work and how can it be used to explore files?
+   - Output: Provided the user manual definition of `-l` in context of `grep`, and 4 conceptual applications of `grep -l` with syntax. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -l`.
    
-3. `-c`: Prints the number of lines that contains the pattern in it to the terminal.  
+5. `-c`: Prints the number of lines that contains the pattern in it to the terminal.  
    Syntax: `grep -c "pattern" /file path/`  
 
    Like for all other `grep` applications that take a file path, I can search through all the text files in a directory with `*.txt`. In the example below, `grep -c` is used to search for occurences of "RNA" in all the text files in the directory `technical/biomend`. For each file, the path is printed to the terminal along with a colon and the number that represents the numver of lines in the file that contain "RNA".
@@ -119,7 +118,7 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    ```
    Source: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
    
-5. `-f file`: Searches through files for the patterns specified in the file passed as the `file` argument after -f. 
+6. `-f file`: Searches through files for the patterns specified in the file passed as the `file` argument after -f. 
    Syntax: `grep -f /pattern file/ /file to search/`
 
    This option is extremely useful for searching for multiple patterns in files. To illustrate this, I created a new file named `pattern.txt` in my `lab4` directrory with three patterns to search for: "base pair", "crime rate", and "space exploration".
@@ -146,9 +145,9 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:At this time, only weapons systems and space exploration
    technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:a comparable item. Those under the caption "space exploration" are
    ```
-   _Source: Chat_GPT_ <br/>
-       - Prompt: How does grep -f file work and how can it be used to explore files?
-       - Output: Provided the user manual definition of `-f file` in context of `grep`, and indicated that it could be used. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -f file`.
+   _Source: Chat_GPT_
+   - Prompt: How does grep -f file work and how can it be used to explore files?
+   - Output: Provided the user manual definition of `-f file` in context of `grep`, and indicated that it could be used. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -f file`.
 
 
 

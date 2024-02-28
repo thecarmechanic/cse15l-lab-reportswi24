@@ -2,7 +2,7 @@
 ## 2/27 Lab Report 4
 #### Step 1: Login to ieng6**
 **Keys pressed:** `<up><up><enter>`  
-The command to connect to my remote account, `ssh cah010@ieng6.ucsd.edu` was 2 steps before in the terminal history, so I clicked the up arrow twice to access it and pressed the enter key to run it.  
+    The command to connect to my remote account, `ssh cah010@ieng6.ucsd.edu` was 2 steps before in the terminal history, so I clicked the up arrow twice to access it and pressed the enter key to run it.  
 ![Image][screenshots/]
 
 #### Step 2: Clone repository with ssh link

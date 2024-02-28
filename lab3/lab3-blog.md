@@ -91,7 +91,7 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    technical/plos/journal.pbio.0020190.txt
    ```
 
-   _Source: Chat_GPT_
+   _Source: Chat_GPT_ <br/>
        - Prompt: How does grep -l work and how can it be used to explore files?
        - Output: Provided the user manual definition of `-l` in context of `grep`, and 4 conceptual applications of `grep -l` with syntax. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -l`.
    
@@ -122,7 +122,7 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
 5. `-f file`: Searches through files for the patterns specified in the file path passed as the `file` argument after -f.  
    Syntax: `grep -f /pattern file path/ /file path to search/`
 
-   _Source: Chat_GPT_
+   _Source: Chat_GPT_ <br/>
        - Prompt: How does grep -f file work and how can it be used to explore files?
        - Output: Provided the user manual definition of `-f file` in context of `grep`, and indicated that it could be used. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -f file`.
 

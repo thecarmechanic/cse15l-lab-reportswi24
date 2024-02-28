@@ -119,9 +119,33 @@ Recall that at it's simplest form, the `grep` command takes a String pattern and
    ```
    Source: [https://www.geeksforgeeks.org/grep-command-in-unixlinux/](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
    
-5. `-f file`: Searches through files for the patterns specified in the file path passed as the `file` argument after -f.  
-   Syntax: `grep -f /pattern file path/ /file path to search/`
+5. `-f file`: Searches through files for the patterns specified in the file passed as the `file` argument after -f. 
+   Syntax: `grep -f /pattern file/ /file to search/`
 
+   This option is extremely useful for searching for multiple patterns in files. To illustrate this, I created a new file named `pattern.txt` in my `lab4` directrory with three patterns to search for: "base pair", "crime rate", and "space exploration".
+   ```
+   $ cat pattern.txt
+   base pair
+   crime rate
+   space exploration%
+   ```
+   Then, I searched the text files in `technical/plos` for occurences of the pattern with the expansion `*.txt`. The results printed to the terminal show three lines where the pattern "base pair" was found across 2 different text files, but no instances of the patterns "crime rate" or "space exploraiton". It seems that the `grep -f` command prints the relevant file path and lines long as there is a match with any one of the patterns specified.
+   ```
+   $ grep -f pattern.txt technical/plos/*.txt
+   technical/plos/journal.pbio.0020190.txt:        sequence, which is a specific series of eight base pairs in the DNA of the bacterial
+   technical/plos/journal.pbio.0020190.txt:        chromosomes, on the order of one or two thousand base pairs of DNA (or less—their length is
+   technical/plos/journal.pbio.0020223.txt:        Watson-Crick base pairing, the proximity of the synthetic reactive groups elevates their
+   ```
+   Like for other `grep` options, I can combine `-f` this with other commands, such as `r`, to recursively search for files in directories with more levels. In the example below, I search for occurrences of the patterns in `pattern.txt` in the directory `technical/government` and find 6 total occurrences of "crime rate" and "space exploration" in the entire directory. This method can be applied to search for multiple patterns directories that we may not know the depth of.
+   ```
+   $ grep -f pattern.txt -r technical/government
+   technical/government/About_LSC/Progress_report.txt:self-sufficiency and growing crime rates. Despite the hard work and
+   technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:military weapons systems and space exploration hardware) to
+   technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:for space exploration purposes, and
+   technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:space exploration facilities and equipment as Federal mission
+   technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:At this time, only weapons systems and space exploration
+   technical/government/Gen_Account_Office/Statements_Feb28-1997_volume.txt:a comparable item. Those under the caption "space exploration" are
+   ```
    _Source: Chat_GPT_ <br/>
        - Prompt: How does grep -f file work and how can it be used to explore files?
        - Output: Provided the user manual definition of `-f file` in context of `grep`, and indicated that it could be used. I included the definitions above, translated into my own words, and created my own examples with a newfound understanding of how to apply `grep -f file`.

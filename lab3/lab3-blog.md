@@ -6,21 +6,23 @@
 Last week, I stepped through the process of indentifying and isolating progam bugs.  
 <br/>For the `ArrayExamples` class, I used `JUnit` tests to check for buggy methods. Let's look at one example.
 > 🔄 **Buggy Method:** `reverseInPlace(int[] arr)`
-> **Failure-Inducing Input**
+> **JUnit Tests**
 > ```
-> int[] fails = {3,2,1};
-> assertArrayEquals(new int[]{1,2,3}, ArrayExamples.reverseInPlace(fails));
-> ```
-> 
-> **Asymptomatic Input**
-> ```
-> int[] passes = {3,3,3};
-> assertArrayEquals(new int[]{3,3,3}, input1);
+> @Test
+> public voide testReverseInPlace() {
+>    // failure-inducing input
+>    int[] fails = {3,2,1};
+>    assertArrayEquals(new int[]{1,2,3}, ArrayExamples.reverseInPlace(fails));
+>
+>    // asymptomatic input
+>    int[] passes = {3,3,3};
+>    assertArrayEquals(new int[]{3,3,3}, input1);
+> }
 > ```
 > 
 > **Symptom**
 > ![Image](screenshots/bug-symptom.png)  
-> From the output after running my tests, it appears that the _failure-inducing input_ is not reversing as expected.
+> From the output after running my tests, it appears that the failure-inducing input, the arraay `fails`, is not reversing as expected.
 > 
 > **The Bug**
 > - Before fix:

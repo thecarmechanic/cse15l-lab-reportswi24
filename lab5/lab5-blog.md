@@ -2,7 +2,7 @@
 ## 3/12 Lab Report 5
 ### Part I: Debugging Scenario
 
-> #### Unexpected grading scrip compile error behavior
+> #### Unexpected grading script compile error behavior
 > _Posted by_ **Some Student**  
 > &nbsp;My grading script code behaves as expected for all the "student submission" repository links that successfully compile, but for the "submissions" that fail on the compile step, then the output looks a little weird. For reference, here is the bash script code I wrote to check for an handle compile errors:
 > ```

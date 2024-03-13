@@ -27,7 +27,7 @@
 ### Comments:
 > #### TA Response:
 > Hi Some! That is a great guess for what the issue might be. Let's test your hypothesis and see if we can locate the bug. What happens when you remove the `cat compile-message.txt` line? Does the error still print? Next, can you check the contents of `compile-message.txt` and see if there is anything in it?  
-<br/>
+
 > #### Student Response:
 > When I removed the `cat compile-message.txt` line, the output to the terminal was no different. This is indeed because the `compile-message.txt` file, which I tried to redirect the compiler message to, is empty. Why is that?
 > ![Image][screenshots/debugging]

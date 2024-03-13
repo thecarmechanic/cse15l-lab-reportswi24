@@ -115,7 +115,7 @@
   ![Image][screenshots/unexpected-output-error.png]
 - Bug fix: The bug can be fixed with a second redirect command to catch the error message in a text file. For instance, `javac -cp $CPATH *.java > compile-message.txt` can be changed to `javac -cp $CPATH *.java > compile-message.txt 2>&1`, which directs the error message into the same file `compile-message.txt`.
  
-_Source:_[https://www.redhat.com/sysadmin/redirect-shell-command-script-output](https://www.redhat.com/sysadmin/redirect-shell-command-script-output)  
+_Source:_ [https://www.redhat.com/sysadmin/redirect-shell-command-script-output](https://www.redhat.com/sysadmin/redirect-shell-command-script-output)  
 For information on standard outputs and redirects in scripting.
 
 

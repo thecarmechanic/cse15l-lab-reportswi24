@@ -34,14 +34,14 @@
 
 > #### Ta Response:
 > Great observation! So the reason for this is because shell scripts, including bash, handle error outputs separately from normal outputs. In fact, in `bash` you can think of your code `javac -cp $CPATH *.java` as producing two outputs - one normal and one error that are automatically printed to the terminal. If compile succeeds, both outputs are empty and nothing is printed to the terminal because Java doesn't automatically print messages that indicate if compile succeeds. If compile fails, then the normal ouput is empty while the error output is printed to the terminal. Now, when you redirect the output (in this case, to `compile-messages.txt`) the first output (normal), which is empty, is redirected with the first `>`, and the secont output (error) is printed to the terminal. With this in mind, how would you redirect the second output, the error message?
-<br/
+
 > #### Student Response:
 > Oh, I think I get it now! Should I add a second redirect on the same line to catch the error message into a file?
-<br/>
+
 > #### TA Response:
 > Yes, you got it! Try that out, and if you get stuck, there are plenty of helpful syntax guides on the internet. Happy debugging :)  
-<br/>
-**_Coding Context & Debugging Summary_**
+
+### **_Coding Context & Debugging Summary_**
 - File and directory structure:
   > ```
   > grading-area/

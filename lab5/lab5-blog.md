@@ -20,21 +20,21 @@
 > fi
 > ```
 > I redirect any compile output message into a new file. If content is saved to it, the code failed to compile. I copy the error message to the terminal sandwiched between two messages that indicate that a compile message has occured first, and then a brief description to help students consider possible errors.
->
 > However, when I run my grading script from the command line passing the repository `https://github.com/ucsd-cse15l-f22/list-methods-compile-error` as an argument, then it produces the symptom where the error message is printed before my echo statements, even though my code clearly specifies that it should be printed in between. In this case, the failure inducing input is the repository I passed to `grade.sh`, which I can see creates a compile error due to a missing semicolon in the `ListExamples.java` file.
 > ![Image][screenshots/unexpected-output-error.png]
 > My guess is that on line of my code above, the compiler error thrown somehow isn't getting redirected to the file `compile-message.txt` and is instead getting printed directly to the terminal. But why might this be happening and how can I change this so that it is redirected?
-<br/>
+
+### Comments:
 > #### TA Response:
 > Hi Some! That is a great guess for what the issue might be. Let's test your hypothesis and see if we can locate the bug. What happens when you remove the `cat compile-message.txt` line? Does the error still print? Next, can you check the contents of `compile-message.txt` and see if there is anything in it?  
 <br/>
 > #### Student Response:
 > When I removed the `cat compile-message.txt` line, the output to the terminal was no different. This is indeed because the `compile-message.txt` file, which I tried to redirect the compiler message to, is empty. Why is that?
 > ![Image][screenshots/debugging]
-<br/>
+
 > #### Ta Response:
 > Great observation! So the reason for this is because shell scripts, including bash, handle error outputs separately from normal outputs. In fact, in `bash` you can think of your code `javac -cp $CPATH *.java` as producing two outputs - one normal and one error that are automatically printed to the terminal. If compile succeeds, both outputs are empty and nothing is printed to the terminal because Java doesn't automatically print messages that indicate if compile succeeds. If compile fails, then the normal ouput is empty while the error output is printed to the terminal. Now, when you redirect the output (in this case, to `compile-messages.txt`) the first output (normal), which is empty, is redirected with the first `>`, and the secont output (error) is printed to the terminal. With this in mind, how would you redirect the second output, the error message?
-<br/>
+<br/
 > #### Student Response:
 > Oh, I think I get it now! Should I add a second redirect on the same line to catch the error message into a file?
 <br/>
